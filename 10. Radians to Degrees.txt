@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Nachaloto
+
+{
+    class Nachaloto
+    {
+        static void Main()
+        {
+            var n = double.Parse(Console.ReadLine());
+            var r = n * (180 / Math.PI);
+            Console.WriteLine(Math.Round(r));
+        }
+    }
+}

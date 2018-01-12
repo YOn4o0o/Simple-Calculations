@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Nachaloto
+
+{
+    class Nachaloto
+    {
+        static void Main()
+        {
+            var n = double.Parse(Console.ReadLine());
+            var d = 1.79549;
+            var sum = n * d;
+            Console.WriteLine($"{sum:f2} BGN");
+        }
+    }
+}

@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Currency_Converter
+{
+    class Program
+    {
+        static void Main()
+        {
+            double input = double.Parse(Console.ReadLine());
+            string from = Console.ReadLine();
+            string to = Console.ReadLine();
+
+            double result = 0;
+
+            if (from == "BGN")
+            {
+                if (to == "USD")
+                {
+                    result = input / 1.79549;
+                }
+                if(to == "EUR")
+                {
+                    result = input / 1.95583;
+                }
+                if(to == "GBP")
+                {
+                    result = input / 2.53405;
+                }
+            }
+            if (from == "USD")
+            {
+                if (to == "BGN")
+                {
+                    result = input * 1.79549;
+                }
+
+                if (to == "EUR")
+                {
+                    result = (input * 1.79549) / 1.95583;
+                }
+
+                if (to == "GBP")
+                {
+                    result = (input * 1.79549) / 2.53405;
+                }
+            }
+
+            if (from == "EUR")
+            {
+                if (to == "BGN")
+                {
+                    result = input * 1.95583;
+                }
+                if (to == "USD")
+                {
+                    result = (input * 1.95583) / 1.79549;
+                }
+                if (to == "GBP")
+                {
+                    result = (input * 1.95583) / 2.53405;
+                }
+            }
+
+            if (from == "GBP")
+            {
+                if (to == "BGN")
+                {
+                    result = input * 2.53405;
+                }
+                if (to == "USD")
+                {
+                    result = (input * 2.53405) / 1.79549;
+                }
+                if (to == "EUR")
+                {
+                    result = (input * 2.53405) / 1.95583;
+                }
+            }
+            Console.WriteLine(Math.Round(result, 2) + " " + to);
+        }
+    }
+}
